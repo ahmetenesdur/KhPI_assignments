@@ -1,0 +1,22 @@
+{% extends 'layout.html' %} {% block content %}
+<h1>Tour Details</h1>
+{% if trips %}
+<table>
+  <tr>
+    <th>Country</th>
+    <th>Tour Operator</th>
+    <th>Price</th>
+    <th>Number of Days</th>
+  </tr>
+  {% for trip in trips %}
+  <tr>
+    <td>{{ trip.country }}</td>
+    <td>{{ trip.tour_operator }}</td>
+    <td>{{ trip.price }}</td>
+    <td>{{ trip.number_of_days }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% elif msg %}
+<p>{{ msg }}</p>
+{% endif %} {% endblock %}
