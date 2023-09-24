@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+}
+
+h1 {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+p {
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+p:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+p:hover {
+  background-color: #4caf50; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}

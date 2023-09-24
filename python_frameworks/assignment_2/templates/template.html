@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Linking the stylesheet -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <title>Jinja Template Example</title>
+  </head>
+  <body>
+    <h1>Data Processed with Jinja</h1>
+    <!-- Looping over the data passed from Flask to perform operations using Jinja syntax -->
+    {% for item in data.example_data %}
+    <!-- Conditional statements to check if the item is even or odd -->
+    {% if item % 2 == 0 %}
+    <p>{{ item }} is even</p>
+    {% else %}
+    <p>{{ item }} is odd</p>
+    {% endif %} {% endfor %}
+  </body>
+</html>
