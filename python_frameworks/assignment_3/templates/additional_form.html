@@ -1,0 +1,31 @@
+{% extends 'layout.html' %} {% block content %}
+<h1>Filter Trips</h1>
+<form method="post" action="/process_additional_form">
+  <div class="form-group">
+    <label for="region">Choose a Region:</label><br />
+    <input type="radio" id="region1" name="region" value="Europe" required />
+    <label for="region1">Europe</label><br />
+    <input type="radio" id="region2" name="region" value="Asia" required />
+    <label for="region2">Asia</label>
+  </div>
+  <div class="form-group">
+    <label for="country">Choose a Country:</label>
+    <select id="country" name="country" class="form-control" required>
+      <option value="Turkey">Turkey</option>
+      <option value="Spain">Spain</option>
+      <option value="Greece">Greece</option>
+      <option value="Italy">Italy</option>
+      <option value="France">France</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="otherOptions">Preferred Tour Duration:</label>
+    <select id="otherOptions" name="otherOptions" class="form-control" required>
+      <option value="short">Short (1-3 days)</option>
+      <option value="medium">Medium (4-7 days)</option>
+      <option value="long">Long (8 days and above)</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

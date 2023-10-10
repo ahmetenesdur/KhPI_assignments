@@ -1,0 +1,19 @@
+{% with messages = get_flashed_messages(with_categories=true) %} {% if messages
+%} {% for category, message in messages %}
+<div class="alert alert-{{ category }}">{{ message }}</div>
+{% endfor %} {% endif %} {% endwith %} {% extends 'layout.html' %} {% block
+content %}
+<form method="post" action="/process_form">
+  <div class="form-group">
+    <label for="inputField">Input Field</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inputField"
+      name="inputField"
+      required
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

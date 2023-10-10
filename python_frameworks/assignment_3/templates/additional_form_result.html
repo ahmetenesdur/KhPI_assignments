@@ -1,0 +1,30 @@
+{% extends 'layout.html' %} {% block content %}
+<h1>Filtered Trips</h1>
+
+<p>Country: {{ country }}</p>
+<p>Preferred Tour Duration: {{ preferred_duration }}</p>
+
+{% if trips %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Country</th>
+      <th>Tour Operator</th>
+      <th>Price</th>
+      <th>Number of Days</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for trip in trips %}
+    <tr>
+      <td>{{ trip.country }}</td>
+      <td>{{ trip.tour_operator }}</td>
+      <td>{{ trip.price }}</td>
+      <td>{{ trip.number_of_days }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>No trips found for the selected criteria.</p>
+{% endif %} {% endblock %}
