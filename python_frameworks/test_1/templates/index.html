@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="full-height">
+  <head>
+    <title>Fibonacci Checker</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="center-wrapper">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form method="post">
+              {{ form.hidden_tag() }}
+              <div class="form-group">
+                {{ form.number.label }} {{ form.number(class="form-control") }}
+              </div>
+              {{ form.submit(class="btn btn-primary") }}
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

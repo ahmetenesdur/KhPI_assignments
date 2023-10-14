@@ -1,0 +1,34 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+env/
+venv/
+myenv/
+
+# Flask session files
+instance/
+
+# Flask file uploads
+uploads/
+
+# Pycharm IDE files
+.idea/
+
+# VS Code files
+.vscode/
+
+# Database files (if you have any)
+*.db
+*.sqlite
+
+# Log files
+*.log
+
+# Environment variables
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
