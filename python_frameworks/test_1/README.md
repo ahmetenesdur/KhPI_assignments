@@ -67,8 +67,6 @@ The objective of this project was to craft a straightforward web application uti
 
 ## Screenshots:
 
-(Note: Embed actual screenshots here for a comprehensive view.)
-
 1. **Main Input Screen**:
    A screenshot showcasing the primary screen where users can input a number.
    ![Main Input Screen](https://i.imgur.com/xqnBfXU.png)
